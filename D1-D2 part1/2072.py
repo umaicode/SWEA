@@ -6,7 +6,7 @@ for test_case in range(1, T + 1):
     numbers = list(map(int, ls))
     for number in numbers:
         if number % 2 == 0:
-            pass
+            continue
         else:
             result += number
 
