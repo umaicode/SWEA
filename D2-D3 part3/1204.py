@@ -8,11 +8,10 @@ for test_case in range(1, T + 1):
         count[num] += 1
 
     max_v = float("-inf")
+    max_index = 0
     for idx, i in enumerate(count):
-        if i > max_v:
+        if (i > max_v) or (i == max_v and idx > max_index):
             max_v = i
+            max_index = idx
 
-    maximum = max(count)
-    print(count)
-    k = count.index(maximum)
-    print(f"#{n} {k}")
+    print(f"#{test_case} {max_index}")
